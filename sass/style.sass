@@ -1,0 +1,124 @@
+$bg: hsl(216, 12%, 8%)
+$main-color:hsl(213, 19%, 18%)
+$medium-grey:hsla(216, 12%, 54%, 0.2)
+$light-grey:hsl(217, 12%, 63%)
+$white: hsl(0, 0%, 100%)
+$orange: hsl(25, 97%, 53%)
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Overpass', sans-serif
+
+body
+    min-height: 100vh
+    background: $bg
+    display: flex
+    align-items: center
+    justify-content: center
+
+main
+    background: $main-color
+    width: 23em
+    height: 26em
+    padding: 2em
+    border-radius: 20px
+
+.image
+    width: 2.4em
+    height: 2.4em
+    border-radius: 50%
+    background: $medium-grey
+    display: flex
+    align-items: center
+    justify-content: center
+
+.text
+    
+  h1
+    color: $white
+    margin-top: .5em
+    font-size: 2.2em
+    font-weight: bold
+
+  p
+    color: $light-grey
+    margin-top:.5em
+    font-size: .9em
+
+.ratingStars
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 1em
+    button
+        cursor: pointer
+        width: 4em
+        height: 4em
+        background: $medium-grey
+        border-radius: 50%
+        color: $light-grey
+        border: none
+        
+        &:hover
+            background: $light-grey
+            color: $white
+
+button.active
+    background: $orange
+    color: $white
+
+.btn
+    margin-top: 2em
+    button
+        cursor: pointer
+        transition: .2s
+        width: 100%
+        height: 3em
+        border-radius: 20px
+        background: $orange
+        color: $white
+        border: none
+        font-weight: bold
+        text-transform: uppercase
+        letter-spacing: 2px
+        &:hover
+            background: $white
+            color: $orange
+
+// Thank you area
+
+.thankyou
+    display: none
+    align-items: center
+    flex-direction: column
+    background: $main-color
+    width: 26em
+    height: 25em
+    padding: 2em
+    border-radius: 20px
+
+.rating
+    display: grid
+    place-items: center
+    margin-top: 1em
+    width: 10em
+    height: 1.7em
+    background-color: $medium-grey
+    border-radius: 20px
+    span
+        background: transparent
+        font-size: .9em
+        color: $orange
+        margin: 5px 0
+
+
+@media (max-width: 440px)
+    main
+        width: 90vw
+        height: 27em
+
+    .thankyou
+        width: 90vw
+        height: 23em
